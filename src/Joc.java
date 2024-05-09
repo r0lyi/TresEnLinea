@@ -4,11 +4,12 @@ public class Joc {
     private char tabla;
     private int turno;
 
-    public static void nuevaPartida(){
+    public  void nuevaPartida(){
 
     }
-    public static void jugar(){
+    public  void jugar(){
+        
     }
-    public static void jugadaGanadora(){
+    public  void jugadaGanadora(){
     }
 }

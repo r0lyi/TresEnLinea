@@ -8,25 +8,22 @@ public class Main {
         int opcion;
 
         do {
-            System.out.println("MENÚ PRINCIPAL");
-            System.out.println("=================");
-            System.out.println("(1)Nueva partida (2)Cargar partida (3)Configuración (4)Salir");
-            System.out.print("Introduzca una opción: ");
+            menu();
 
             opcion = sc.nextInt();
 
             switch (opcion) {
                 case 1:
-                    System.out.println("Has elegido: Nueva partida");
+                    novaPartida();
                     break;
                 case 2:
-                    System.out.println("Has elegido: Carga partida");
+                    cargarPartida();
                     break;
                 case 3:
-                    System.out.println("Has elegido: Configuración");
+                    config();
                     break;
                 case 4:
-                    System.out.println("Has elegido: Salir");
+                    salir();
                     break;
                 default:
                     System.out.println("Opción no válida. Inténtalo de nuevo.");
@@ -35,5 +32,28 @@ public class Main {
 
         System.out.println("¡Gracias por jugar!");
 
+    }
+
+    private static void salir() {
+        System.out.println("Has elegido: Salir");
+    }
+
+    private static void config() {
+        System.out.println("Has elegido: Configuración");
+    }
+
+    private static void cargarPartida() {
+        System.out.println("Has elegido: Carga partida");
+    }
+
+    private static void novaPartida() {
+        System.out.println("Has elegido: Nueva partida");
+    }
+
+    private static void menu() {
+        System.out.println("MENÚ PRINCIPAL");
+        System.out.println("=================");
+        System.out.println("(1)Nueva partida (2)Cargar partida (3)Configuración (4)Salir");
+        System.out.print("Introduzca una opción: ");
     }
 }
