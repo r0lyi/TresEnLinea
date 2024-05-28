@@ -1,49 +1,68 @@
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        sc.useLocale(Locale.ENGLISH);
-menu(sc);
+        Scanner sc = new Scanner(System.in);
 
-    }
-    public static void menu(Scanner sc){
-
+        int opcion;
 
         do {
+            menu();
 
-            System.out.println("MENÚ PRINCIPAL");
-            System.out.println("=================");
-            System.out.println("1  Nueva partida");
-            System.out.println("2  Carga partida");
-            System.out.println("3  Configuración");
-            System.out.println("4  Salir");
-            System.out.print("Introduzca una opción: ");
-            int opcion = sc.nextInt();
+            opcion = sc.nextInt();
 
             switch (opcion) {
-
                 case 1:
-                    System.out.println("Has elegido: Nueva partida");
+                    novaPartida();
                     break;
                 case 2:
-                    System.out.println("Has elegido: Carga partida");
+                    cargarPartida();
                     break;
                 case 3:
-                    System.out.println("Has elegido: Configuración");
+                    config();
                     break;
                 case 4:
-                    System.out.println("Has elegido: Salir");
+                    calcular();
                     break;
+                case 5:
+                    salir();
+                    break;
+
                 default:
-                    System.out.println("Opción no válida,Inténtalo de nuevo.");
+                    System.out.println("Opción no válida. Inténtalo de nuevo.");
             }
-        }
-        while (opcion != 4);
+        } while (opcion != 5);
 
+        System.out.println("¡Gracias por jugar!");
 
-        System.out.println("Ya no estas en el juego");
-        sc.close();
     }
+
+    private static void salir() {
+        System.out.println("Has elegido: Salir");
+    }
+
+    private static void config() {
+        System.out.println("Has elegido: Configuración");
+    }
+
+    private static void cargarPartida() {
+        System.out.println("Has elegido: Carga partida");
+    }
+
+    private static void novaPartida() {
+        System.out.println("Has elegido: Nueva partida");
+    }
+
+    private static void menu() {
+        System.out.println("MENÚ PRINCIPAL");
+        System.out.println("=================");
+        System.out.println("(1)Nueva partida (2)Cargar partida (3)Configuración (4)Salir");
+        System.out.print("Introduzca una opción: ");
+    }
+    private static void calcular() {
+        System.out.println("Estas en una calcualdora");
+
+    }
+
 }
